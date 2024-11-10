@@ -1,1 +1,1 @@
-This is the first assignment of INT410 course.
+These are assignments of INT410 course.
