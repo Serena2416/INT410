@@ -7,13 +7,10 @@ from scipy import linalg
 from sklearn.preprocessing import normalize
 from scipy.spatial import distance
 
-##Data Generation#######
+##Data Generation##
 n_samples = 1500 # Number of samples to generate
-
-############Complete the code in the blank spaces#################
 # Set random seed for reproducibility
 random_state = 17
-######################################
 
 # Generate isotropic Gaussian blobs for clustering
 X, y = make_blobs(n_samples=n_samples, random_state=random_state)
@@ -28,7 +25,6 @@ plt.subplot(151)
 plt.scatter(X_aniso[:,0], X_aniso[:,1], s=20)
 plt.title("Unlabeled data", fontsize=10)
 
-############Complete the code in the blank spaces#################
 # KMeans clustering
 y_pred = KMeans(n_clusters=3,random_state=random_state).fit_predict(X_aniso) 
 y_pred = list(y_pred)
@@ -75,10 +71,8 @@ y_pred_sc_sklearn = list(y_pred_sc_sklearn)
 plt.subplot(155)
 plt.scatter(X_aniso[:, 0], X_aniso[:, 1], c=y_pred_sc_sklearn, s=20) # Plot Sklearn's spectral clustering result
 plt.title("Spectral Clustering (Sklearn)", fontsize=10)
-
 plt.show()
 
-#########Complete the code ############
 # Define a function to calculate the Normalized Mutual Information score
 # This function evaluates how similar the clustering results are to the true labels
 from sklearn.metrics import normalized_mutual_info_score
